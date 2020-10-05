@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/accounting.js/0.4.1/accounting.min.js"
+      integrity="sha512-LW+1GKW2tt4kK180qby6ADJE0txk5/92P70Oh5YbtD7heFlC0qFFtacvSnHG4bNXmLnZq5hNb2V70r5DzS/U+g=="
+      crossorigin="anonymous"
+    ></script>
+    <title>My Budget App</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="budget budget-container">
+        <p class="budget__title">
+          Available Budget in
+          <span class="budget__title--date">%Month year%</span>
+        </p>
+        <h1 class="budget__total">+ 3,100.00</h1>
+        <div class="budget__income budget__bar">
+          <p class="budget__income--text">income</p>
+
+          <div class="budget__income--value">+ 4,000.00</div>
+        </div>
+        <div class="budget__expense budget__bar">
+          <p class="budget__expense--text">expenses</p>
+          <div>
+            <div class="budget__expenses--value">- 900.00</div>
+            <span class="total-expense-percentage">23%</span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="add">
+        <div class="add__container">
+          <select class="add__type" name="type" id="">
+            <option value="inc">+</option>
+            <option value="exp">-</option>
+          </select>
+          <input
+            type="text"
+            class="add__description"
+            placeholder="Add description"
+            name="description"
+          />
+          <input
+            type="number"
+            class="add__value"
+            placeholder="Value"
+            name="value"
+          />
+          <button class="add__btn">
+            <i class="ion-ios-checkmark-outline"></i>
+          </button>
+        </div>
+      </section>
+      <section class="budget__history">
+        <div class="income">
+          <h2 class="income__title">Income</h2>
+          <ul class="income__list">
+            <!-- <li class="income__item">
+              <div class="income__description">Website Project</div>
+              <div class="income__info">
+                <div class="income__value">+ 2,500.00</div>
+                <div class="item__delete">
+                  <button class="item__delete--btn">
+                    <i class="ion-ios-close-outline"></i>
+                  </button>
+                </div>
+              </div>
+            </li> -->
+          </ul>
+        </div>
+        <div class="expenses">
+          <h2 class="expense__title">Expense</h2>
+          <ul class="expense__list">
+            <!-- <li class="expense__item">
+              <div class="expense__description">Bill</div>
+              <div class="expense__info">
+                <div class="expense__value">
+                  300 <span class="item__percentage">10%</span>
+                </div>
+                <div class="item__delete">
+                  <button class="item__delete--btn">
+                    <i class="ion-ios-close-outline"></i>
+                  </button>
+                </div>
+              </div>
+            </li> -->
+          </ul>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
